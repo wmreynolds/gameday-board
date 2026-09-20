@@ -381,7 +381,7 @@ async function refresh() {
 function schedule() {
   clearTimeout(timer);
   if (document.hidden) return;
-  timer = setTimeout(refresh, hasLive() ? 20000 : 60000);
+  timer = setTimeout(refresh, hasLive() ? 10000 : 60000);
 }
 document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); else clearTimeout(timer); });
 
