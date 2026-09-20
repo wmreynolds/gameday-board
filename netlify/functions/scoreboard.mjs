@@ -202,9 +202,9 @@ export default async (req) => {
     { date, updated: new Date().toISOString(), games, warnings },
     {
       headers: {
-        "Cache-Control": "public, max-age=10",
+        "Cache-Control": "public, max-age=0",
         // Netlify's CDN absorbs traffic so upstream feeds are hit at most every ~15s
-        "Netlify-CDN-Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
+        "Netlify-CDN-Cache-Control": "public, s-maxage=8, stale-while-revalidate=15",
       },
     }
   );
