@@ -65,8 +65,8 @@ export default async (req) => {
     { rows, wp, last },
     {
       headers: {
-        "Cache-Control": "public, max-age=10",
-        "Netlify-CDN-Cache-Control": "public, s-maxage=15, stale-while-revalidate=30",
+        "Cache-Control": "public, max-age=0",
+        "Netlify-CDN-Cache-Control": "public, s-maxage=8, stale-while-revalidate=15",
       },
     }
   );
